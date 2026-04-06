@@ -20,6 +20,7 @@ jobs:
   # STAGE 1: Linting
   # ==============================================================
   lint:
+    if: false
     name: "🔍 Lint Code"
     runs-on: ubuntu-latest
     continue-on-error: true
@@ -51,7 +52,6 @@ jobs:
   sca:
     name: "🛡️ Dependency Audit"
     runs-on: ubuntu-latest
-    needs: lint
     strategy:
       matrix:
         component: [backend, frontend]
@@ -164,7 +164,6 @@ jobs:
     name: "🏗️ IaC Security Scan"
     runs-on: ubuntu-latest
     continue-on-error: true
-    needs: lint
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

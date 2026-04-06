@@ -128,7 +128,7 @@ spec:
               done
       containers:
         - name: backend
-          image: partha491612/jerney-backend:v2
+          image: ghcr.io/kummaraparthasai/Jerney/jerney-backend:8aefbdb
           ports:
             - containerPort: 5000
           env:
@@ -189,7 +189,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: partha491612/jerney-frontend:v2
+          image: ghcr.io/kummaraparthasai/Jerney/jerney-frontend:8aefbdb
           ports:
             - containerPort: 8080
 
